@@ -2,6 +2,7 @@
 
 Reducing Uncertainty in Ocean Carbon Reconstructions
 
+Main notebook is titled Final_notebook.ipynb
 
 Objective:
 This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) using machine learning models to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
