@@ -1,56 +1,70 @@
-# **Project 3: Machine Learning Reconstruction of Surface Ocean pCO₂**
+# **Project 3: notebooks**
 
-This project reproduces and extends portions of the analysis presented by Gloege et al. (2020) and Heimdal et al. (2024), using machine learning to reconstruct surface ocean partial pressure of CO₂ (pCO₂) and evaluate reconstruction performance under sparse observational coverage.
-
-The notebook implements a **pCO₂-Residual** approach with an **XGBoost** model to improve upon standard pCO₂ reconstructions by isolating and removing the temperature-driven signal prior to machine learning regression. It also evaluates performance using data from the **Large Ensemble Testbed (LET)**.
+Reducing Uncertainty in Ocean Carbon Reconstructions
 
 
-## **Folder Structure**
+Objective:
+This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) using machine learning models to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
 
-To reduce complexity in the main notebook, several helper functions and figures are modularized into the `lib/` directory. You may modify these as needed for your project.
+Approaches:
+Improving Spatial Coverage:
 
-```bash
-Project3/
-├── lib/                       # Helper scripts
-│   ├── __init__.py
-│   ├── bias_figure2.py        # Code for bias calculation and visualization
-│   ├── corr_figure3.py        # Code for correlation calculation and visualization
-│   ├── residual_utils.py      # Prepares data for ML, tools for dataset splitting, model evaluation, and saving files.
-│   └── visualization.py       # Custom plotting class SpatialMap2 for creating high-quality spatial visualizations with colorbars and map features using Cartopy and Matplotlib.
-├── notebooks/
-│   └── Project3_Starter.ipynb # Main notebook containing full analysis & data story
-|   ├── leappersistent_file_management.ipynb # check the size of files and clean up
-|   ├── Project3_Data.ipynb  # Used for preprocessing data, if more than the 20 preprocessed ESM members are required. 
-```
+We simulate expanded observational coverage, especially in the Southern Ocean, to test whether increased data density reduces bias in pCO₂ reconstructions.
 
- ## **Objective**
+Models used: SOM-FFN, XGBoost, and Random Forest.
 
-This project aims to:
-1. Implement an **XGBoost-based pCO₂-Residual reconstruction**.
-2. Evaluate reconstruction accuracy using **bias and correlation metrics**.
-3. Compare reconstructions against gridded output from the **Large Ensemble Testbed (LET)**.
+Testing Model Alternatives:
+
+Evaluation of tree-based models (XGBoost, RF) and deep learning models (CNNs, RNNs, Transformers) to better capture spatiotemporal dependencies.
+
+Understanding Temporal Response:
+
+Investigation of how surface ocean pCO₂ responds to atmospheric drivers using lagged correlation and Granger causality analysis.
+
+Focus on identifying regional differences in carbon uptake dynamics.
+
+Expected Outcome:
+By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange.
 
 
+Contributing
+Team Contributions:
+Kihyun: Responsible for implementing the machine learning models, including pre-processing data, training, and evaluating models, as well as preparing the analysis of ocean pCO₂ reconstruction.
 
-## **References**
+Sylvia: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
 
-- **Gloege et al. (2020)**  
-  *Quantifying Errors in Observationally Based Estimates of Ocean Carbon Sink Variability.*  
-  [DOI: 10.1029/2020GB006788](https://doi.org/10.1029/2020GB006788)
+Martin: Played a key role in the analysis of model results and performance metrics and the construction of the Temporal Response and the correlation of the optimal lag. Also contributed to the visualization and interpretation of the reconstructed data.
 
-- **Bennington et al. (2022)**
-  *Explicit Physical Knowledge in Machine Learning for Ocean Carbon Flux Reconstruction: The pCO2-Residual Method*
-   [DOI: 10.1029/2021ms002960](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2021MS002960)
+Alessandro: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. 
 
-- **Heimdal et al. (2024)**  
-  *Assessing improvements in global ocean pCO₂ machine learning reconstructions with Southern Ocean autonomous sampling.*  
-  [DOI: 10.5194/bg-21-2159-2024](https://doi.org/10.5194/bg-21-2159-2024)
+How to Run the Notebooks
+Clone the Repository:
 
+Use git clone https://github.com/your-github-repo.git to clone the repository.
 
-## **Contributions and Collaboration**
+Install Dependencies:
 
-We encourage collaborative version control using GitHub. If working in a team, please follow contribution guidelines (e.g., commit messages, branches).
+Install the necessary Python packages as listed in the requirements.txt.
 
-You may find [this GitHub tutorial](https://github.com/leap-stc/LEAPCourse-Climate-Pred-Challenges/blob/main/Tutorials/Github-Tutorial.md) helpful for getting started.
+Run the Starter Notebook:
 
+Start with Project3_Starter.ipynb to run the machine learning pipeline.
 
+This notebook includes everything you need to train models, evaluate them, and generate the results.
+
+Explore the Data Notebook:
+
+If you'd like to modify or analyze the raw data, Project3_Data.ipynb will guide you through accessing the raw ESM data and preprocessing it into a format suitable for machine learning.
+
+Future Work
+Increase Data Coverage:
+
+We plan to extend the analysis to include more ensemble members and models for a broader range of climate scenarios.
+
+Advanced Model Techniques:
+
+Explore other machine learning methods like neural networks or deep learning models to improve reconstruction accuracy.
+
+Fine-tuning:
+
+Further optimize model parameters and assess the impact of different preprocessing techniques on model performance.
