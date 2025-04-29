@@ -1,23 +1,70 @@
 # **Project 3: notebooks**
 
-This folder contains notebooks and resources for **Project 3**, where we reconstruct surface ocean pCO₂ from sparse observations using Earth System Model (ESM) outputs and machine learning techniques.
+Reducing Uncertainty in Ocean Carbon Reconstructions
 
-- **`Project3_Starter.ipynb`**  
-  Main notebook for running ML training and evaluation on pre-selected ESMs and members using preprocessed inputs. Recommended for most users seeking an efficient workflow.
-  
-- **`Project3_Data.ipynb`**  
-  A helper notebook that guides you through accessing raw ESM data from `ensemble_dir`, selecting custom members or models, and preprocessing them into ML-ready DataFrames. Use this only if you wish to go beyond the provided datasets.
 
-## Data Overview
+Objective:
+This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) using machine learning models to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
 
-- The raw ESM outputs are stored in **`ensemble_dir`**, which includes many models and members.
-- We have **preprocessed 4 ESMs**, each with **5 members**, and saved them under `MLinputs_path`.
-- In the starter notebook, we **only use 3 ESMs × 3 members** to keep runtime and storage manageable.
+Approaches:
+Improving Spatial Coverage:
 
-## Storage Reminder
+We simulate expanded observational coverage, especially in the Southern Ocean, to test whether increased data density reduces bias in pCO₂ reconstructions.
 
-- Your workspace has a **25 GB limit**.
-- Each preprocessed ML input DataFrame (covering 2004–2023) takes up about **2.35 GB**.
-- You’ll also need space for model outputs and temporary files.
-- Please **avoid re-downloading or duplicating files**, and delete unused data promptly.
-- We recommend using the provided preprocessed data in `MLinputs_path` unless absolutely necessary.
+Models used: SOM-FFN, XGBoost, and Random Forest.
+
+Testing Model Alternatives:
+
+Evaluation of tree-based models (XGBoost, RF) and deep learning models (CNNs, RNNs, Transformers) to better capture spatiotemporal dependencies.
+
+Understanding Temporal Response:
+
+Investigation of how surface ocean pCO₂ responds to atmospheric drivers using lagged correlation and Granger causality analysis.
+
+Focus on identifying regional differences in carbon uptake dynamics.
+
+Expected Outcome:
+By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange.
+
+
+Contributing
+Team Contributions:
+Kihyun: Responsible for implementing the machine learning models, including pre-processing data, training, and evaluating models, as well as preparing the analysis of ocean pCO₂ reconstruction.
+
+Sylvia: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
+
+Martin: Played a key role in the analysis of model results and performance metrics and the construction of the Temporal Response and the correlation of the optimal lag. Also contributed to the visualization and interpretation of the reconstructed data.
+
+Alessandro: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. 
+
+How to Run the Notebooks
+Clone the Repository:
+
+Use git clone https://github.com/your-github-repo.git to clone the repository.
+
+Install Dependencies:
+
+Install the necessary Python packages as listed in the requirements.txt.
+
+Run the Starter Notebook:
+
+Start with Project3_Starter.ipynb to run the machine learning pipeline.
+
+This notebook includes everything you need to train models, evaluate them, and generate the results.
+
+Explore the Data Notebook:
+
+If you'd like to modify or analyze the raw data, Project3_Data.ipynb will guide you through accessing the raw ESM data and preprocessing it into a format suitable for machine learning.
+
+Future Work
+Increase Data Coverage:
+
+We plan to extend the analysis to include more ensemble members and models for a broader range of climate scenarios.
+
+Advanced Model Techniques:
+
+Explore other machine learning methods like neural networks or deep learning models to improve reconstruction accuracy.
+
+Fine-tuning:
+
+Further optimize model parameters and assess the impact of different preprocessing techniques on model performance.
