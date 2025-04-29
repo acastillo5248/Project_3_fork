@@ -1,111 +1,70 @@
-# Climate Prediction Challenges with Machine Learning
-### Spring 2025 ([Syllabus](CourseInfo/CPC-Spring2025-Syllabus.md))
-#### A climate data science course from [LEAP STC](https://leap.columbia.edu)
+# **Project 3: notebooks**
 
-A project-based learning course where teams of climate science and data science students collaborate to create machine learning predictive models for challenges inspired by LEAP's research.
-
-##### Shortcuts: [Project 1](#project-cycle-1-jupyter-notebook-for-exploratory-data-analysis) | [Project 2](#project-cycle-2-physics-informed-machine-learning) | [Project 3](#project-cycle-3-predictive-modeling)
-----
-### Project cycle 1: Hurricanes, Climate, Clustering (Exploratory Data Analysis and Visualization)
-
-Following the work of 
-* Nakamura et al. (2009). Classifying North Atlantic Tropical Cyclone Tracks by Mass Moments. Journal of Climate, 22(20), 5481–5494. [doi:10.1175/2009jcli2828.1](https://doi.org/10.1175/2009jcli2828.1)
-
-([starter codes](Project-StarterCodes/Project1-EDAV))
-
-#### Week 1 (Jan 21)
-+ [Introduction to LEAP CPC] (McKinley)
-+ [Introduction to Earth Systems and Climate Change] (McKinley)
-+ Tutorial on LEAP Pangeo
-+ [Project 1 description](Project-StarterCodes/Project1-EDAV/doc/Proj1_desc.md) *Hurricanes, Climate, Clustering* starts
-+ Team activities
-	+ Introduction and a fun fact
-	+ Review and discuss project 1 materials as a group
+Reducing Uncertainty in Ocean Carbon Reconstructions
 
 
-#### Week 2 (Jan 28)
-+ [A deep dive into Project 1] (McKinley)
-+ [Project 1 starter code review](Project-StarterCodes/Project1-EDAV) (TA Xinyi Ke)
-+ Discussion / Q&A
-+ Round robin - teams share project plans
+Objective:
+This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) using machine learning models to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
 
-#### Week 3 (Feb 4)
-+ Presentation and submission instruction 
-+ Discussion and Q&A
+Approaches:
+Improving Spatial Coverage:
 
-#### Week 4 (Feb 11)
-+ Project 1 presentations
-+ Discussion and Q&A
-  
-----
-##### Shortcuts: [Project 1](#project-cycle-1-jupyter-notebook-for-exploratory-data-analysis) | [Project 3](#project-cycle-3-predictive-modeling)
+We simulate expanded observational coverage, especially in the Southern Ocean, to test whether increased data density reduces bias in pCO₂ reconstructions.
 
-### Project cycle 2: Parameterizing Earth System Models with Machine Learning
+Models used: SOM-FFN, XGBoost, and Random Forest.
 
-Following the work of 
-* Sane, A. et al. (2023). Parameterizing Vertical Mixing Coefficients in the Ocean Surface Boundary Layer Using Neural Networks. Journal of Advances in Modeling Earth Systems, 15(10). [doi:10.1029/2023ms003890](https://doi.org/10.1029/2023ms003890)
+Testing Model Alternatives:
 
-([starter codes])
+Evaluation of tree-based models (XGBoost, RF) and deep learning models (CNNs, RNNs, Transformers) to better capture spatiotemporal dependencies.
 
-#### Week 5 (Feb 18)
-+ [Project 2] starts.
-+ Introduction to Project 2 and the challenge of parameterization (McKinley)
-+ Tutorial on neural networks (Zheng)
-+ Project 2 [starter codes]
-+ Discussion and Q&A
+Understanding Temporal Response:
 
-#### Week 6 (Feb 25)
-+ [Tutorial] [Ocean mixing] (McKinley)
-+ Discussion and Q&A
-+ Round robin - teams share project plans
-  
-#### Week 7 (Mar 4)
-+ Visit by study lead author Dr. Sane
-+ Group work
-+ Discussion and Q&A
+Investigation of how surface ocean pCO₂ responds to atmospheric drivers using lagged correlation and Granger causality analysis.
 
-#### Week 8 (Mar 11)
-+ Group work
-+ Discussion and Q&A
-  
-#### Week 9 (Mar 25)
-+ Project 2 presentations
-+ Discussion and Q&A
-----
-##### Shortcuts: [Project 1](#project-cycle-1-jupyter-notebook-for-exploratory-data-analysis) | [Project 2](#project-cycle-2-physics-informed-machine-learning) 
+Focus on identifying regional differences in carbon uptake dynamics.
 
-### Project cycle 3: Machine Learning to Extrapolate from Sparse Data
+Expected Outcome:
+By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange.
 
-Following the work of 
-* Gloege, L. et al. (2021) Quantifying errors in observationally-based estimates of ocean carbon sink variability, Global Biogeochem. Cycles [doi:10.1029/2020GB006788](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020GB006788).  
-* Heimdal, T.H. and G.A. McKinley (2024) Using observing system simulation experiments to assess impacts of observational uncertainties in surface ocean pCO2 machine learning reconstructions, Scientific Rep.[doi:10.1038/s41598-024-70617-x.](https://link.springer.com/article/10.1038/s41598-024-70617-x)
-* Heimdal, et al. (2024) Assessing improvements in global ocean pCO2 machine learning reconstructions with Southern Ocean autonomous sampling, Biogeosciences [doi:10.5194/bg-21-2159-2024](https://bg.copernicus.org/articles/21/2159/2024/).
-* and other papers from the [McKinley group](https://galenmckinley.github.io/publications/)
 
-([starter codes])
+Contributing
+Team Contributions:
+Kihyun: Responsible for implementing the machine learning models, including pre-processing data, training, and evaluating models, as well as preparing the analysis of ocean pCO₂ reconstruction.
 
-#### Week 10 (April 1)
-+ [Project 3] starts.
-+ [Science Tutorial on "Air-Sea Flux of CO2"] (McKinley)
-+ Review of starter codes
-+ Discussion and Q&A
- 
-#### Week 11 (Apr 8)
-+ [Tutorial on decision tree, random forests and xgboost] (Zheng)
-+ Discussion and Q&A
-+ Round robin - teams share project plans
-  
-#### Week 12 (Apr 15)
-+ Group work
-+ Discussion and Q&A 
+Sylvia: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
 
-#### Week 13 (Apr 22)
-+ Group work
-+ Discussion and Q&A 
+Martin: Played a key role in the analysis of model results and performance metrics. Also contributed to the visualization and interpretation of the reconstructed data.
 
-#### Week 14 (Apr 29)
-+ Project 3 presentations
-+ Discussion and Q&A
-+ Celebrate a great semester!
-  
-##### Shortcuts: [Project 1](#project-cycle-1-jupyter-notebook-for-exploratory-data-analysis) | [Project 3](#project-cycle-3-predictive-modeling)
+Alessandro: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods.
+
+How to Run the Notebooks
+Clone the Repository:
+
+Use git clone https://github.com/your-github-repo.git to clone the repository.
+
+Install Dependencies:
+
+Install the necessary Python packages as listed in the requirements.txt.
+
+Run the Starter Notebook:
+
+Start with Project3_Starter.ipynb to run the machine learning pipeline.
+
+This notebook includes everything you need to train models, evaluate them, and generate the results.
+
+Explore the Data Notebook:
+
+If you'd like to modify or analyze the raw data, Project3_Data.ipynb will guide you through accessing the raw ESM data and preprocessing it into a format suitable for machine learning.
+
+Future Work
+Increase Data Coverage:
+
+We plan to extend the analysis to include more ensemble members and models for a broader range of climate scenarios.
+
+Advanced Model Techniques:
+
+Explore other machine learning methods like neural networks or deep learning models to improve reconstruction accuracy.
+
+Fine-tuning:
+
+Further optimize model parameters and assess the impact of different preprocessing techniques on model performance.
