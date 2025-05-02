@@ -1,5 +1,7 @@
 # **Project 3: notebooks**
 
+IF YOU ARE IN THE ROOT DIRECTORY. PLEASE NAVIGATE TO PROJECT-STARTCODES/PROJECT3-RECONSTRUCTPCO2
+
 Reducing Uncertainty in Ocean Carbon Reconstructions
 
 Main notebook is titled Final_notebook.ipynb
