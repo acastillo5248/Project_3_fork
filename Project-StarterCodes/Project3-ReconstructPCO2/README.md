@@ -27,7 +27,10 @@ Investigation of how surface ocean pCO₂ responds to atmospheric drivers using 
 Focus on identifying regional differences in carbon uptake dynamics.
 
 Expected Outcome:
-By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange.
+By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange as well as improving upon the base xgb model. 
+
+Key Findings:
+Our comparative analysis demonstrated that while Transformer and deep learning approaches showed promise for capturing complex spatiotemporal patterns, the combination of XGBoost with temporal lag analysis and an extended spatial mask delivered the most consistent performance improvements across all evaluation metrics. This integrated approach significantly reduced mean bias error and improved correlation across seasonal, sub-seasonal, and decadal timescales.
 
 
 Contributing
@@ -56,16 +59,3 @@ After running the data notebook run the final notebook. both are in the notebook
 Explore the Data Notebook:
 
 If you'd like to modify or analyze the raw data, Project3_Data.ipynb will guide you through accessing the raw ESM data and preprocessing it into a format suitable for machine learning.
-
-Future Work
-Increase Data Coverage:
-
-We plan to extend the analysis to include more ensemble members and models for a broader range of climate scenarios.
-
-Advanced Model Techniques:
-
-Explore other machine learning methods like neural networks or deep learning models to improve reconstruction accuracy.
-
-Fine-tuning:
-
-Further optimize model parameters and assess the impact of different preprocessing techniques on model performance.
