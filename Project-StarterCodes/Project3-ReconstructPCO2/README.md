@@ -12,7 +12,7 @@ Improving Spatial Coverage:
 
 We simulate expanded observational coverage, especially in the Southern Ocean, to test whether increased data density reduces bias in pCO₂ reconstructions.
 
-Models used: SOM-FFN, XGBoost, and Random Forest.
+Models used: SOM-FFN, XGBoost, and Random Forest, Temporal Analsysis + XGB, Extended Mask + XGB.
 
 Testing Model Alternatives:
 
@@ -30,13 +30,13 @@ By improving spatial data density, testing alternative machine learning models, 
 
 Contributing
 Team Contributions:
-Kihyun: Responsible for implementing the machine learning models, including pre-processing data, training, and evaluating models, as well as preparing the analysis of ocean pCO₂ reconstruction.
+Kihyun Jye: Responsible for testing, including pre-processing data, training, and evaluating different models (ie random forests) for potential use in the final pipeline.
 
-Sylvia: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
+Yutong Uwang: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
 
-Martin: Played a key role in the analysis of model results and performance metrics and the construction of the Temporal Response and the correlation of the optimal lag. Also contributed to the visualization and interpretation of the reconstructed data.
+Martin Celedon : Played a key role in the analysis of model results and performance metrics and the construction of the Temporal Response and the correlation of the optimal lag. Also contributed to the visualization and interpretation of the reconstructed data.
 
-Alessandro Castillo: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. 
+Alessandro Castillo: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. Integrated different finalized methods into single pipeline.
 
 How to Run the Notebooks
 Clone the Repository:
@@ -47,11 +47,9 @@ Install Dependencies:
 
 Install the necessary Python packages as listed in the requirements.txt.
 
-Run the Starter Notebook:
+Run the Data Notebook then Final Notebook:
 
-Start with Project3_Starter.ipynb to run the machine learning pipeline.
-
-This notebook includes everything you need to train models, evaluate them, and generate the results.
+After running the data notebook run the final notebook. both are in the notebooks folder. This notebook includes everything you need to train models, evaluate them, and generate the results.
 
 Explore the Data Notebook:
 
