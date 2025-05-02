@@ -5,7 +5,7 @@ Reducing Uncertainty in Ocean Carbon Reconstructions
 Main notebook is titled Final_notebook.ipynb
 
 Objective:
-This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) using machine learning models to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
+This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) by testing various machine learning models and methods like ffn-cnn, random forest, transformer based regression, temporal residual analysis, and different masking techniques to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
 
 Approaches:
 Improving Spatial Coverage:
@@ -36,7 +36,7 @@ Sylvia: Contributed to dataset exploration, model selection, and result interpre
 
 Martin: Played a key role in the analysis of model results and performance metrics and the construction of the Temporal Response and the correlation of the optimal lag. Also contributed to the visualization and interpretation of the reconstructed data.
 
-Alessandro: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. 
+Alessandro Castillo: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. 
 
 How to Run the Notebooks
 Clone the Repository:
