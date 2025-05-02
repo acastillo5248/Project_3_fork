@@ -4,12 +4,13 @@ IF YOU ARE IN THE ROOT DIRECTORY. PLEASE NAVIGATE TO PROJECT-STARTCODES/PROJECT3
 
 Reducing Uncertainty in Ocean Carbon Reconstructions
 
-Main notebook is titled Final_notebook.ipynb in notebooks folder
+## What notebooks to run
+Main notebook is titled Final_notebook.ipynb in notebooks folder. May need to run Project3_Data notebook first. These are in notebooks folder.
 
-Objective:
+## Objective:
 This project aims to improve the reconstruction of surface ocean partial pressure of CO₂ (pCO₂) by testing various machine learning models and methods like ffn-cnn, random forest, transformer based regression, temporal residual analysis, and different masking techniques to address the challenges posed by sparse observational data. Ocean carbon uptake is crucial for mitigating climate change, but current datasets, such as SOCAT, cover only a small fraction of the ocean, particularly in hard-to-access regions like the Southern Ocean. The goal is to reduce uncertainty in global ocean carbon flux reconstructions by improving data coverage, exploring new machine learning techniques, and analyzing temporal responses to atmospheric drivers.
 
-Approaches:
+## Approaches:
 Improving Spatial Coverage:
 
 We simulate expanded observational coverage, especially in the Southern Ocean, to test whether increased data density reduces bias in pCO₂ reconstructions.
@@ -26,15 +27,13 @@ Investigation of how surface ocean pCO₂ responds to atmospheric drivers using 
 
 Focus on identifying regional differences in carbon uptake dynamics.
 
-Expected Outcome:
+## Expected Outcome:
 By improving spatial data density, testing alternative machine learning models, and analyzing temporal responses, this project seeks to reduce uncertainties in ocean carbon flux reconstructions, thus enhancing our understanding of long-term climate dynamics and air-sea CO₂ exchange as well as improving upon the base xgb model. 
 
-Key Findings:
+## Key Findings:
 Our comparative analysis demonstrated that while Transformer and deep learning approaches showed promise for capturing complex spatiotemporal patterns, the combination of XGBoost with temporal lag analysis and an extended spatial mask delivered the most consistent performance improvements across all evaluation metrics. This integrated approach significantly reduced mean bias error and improved correlation across seasonal, sub-seasonal, and decadal timescales.
 
-
-Contributing
-Team Contributions:
+## Team Contributions:
 Kihyun Jye: Responsible for testing, including pre-processing data, training, and evaluating different models (ie random forests) for potential use in the final pipeline.
 
 Yutong Uwang: Contributed to dataset exploration, model selection, and result interpretation. Assisted in the implementation of preprocessing steps and model validation.
@@ -43,10 +42,7 @@ Martin Celedon : Played a key role in the analysis of model results and performa
 
 Alessandro Castillo: Helped in the development of the spatial and temporal analysis techniques, as well as in refining model selection and data visualization methods. Developed training and reconstruction loops as well as final visualizations. Integrated different finalized methods into single pipeline.
 
-How to Run the Notebooks
-Clone the Repository:
-
-Use git clone https://github.com/your-github-repo.git to clone the repository.
+## Other 
 
 Install Dependencies:
 
